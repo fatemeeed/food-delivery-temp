@@ -15,6 +15,11 @@ ul {
 a {
     text-decoration: none;
 }
+button{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 @font-face {
     font-family: poppins;
@@ -401,18 +406,85 @@ span::after {
     .content-right-header-bottom {
 
         align-self: center;
-        width: 92%;
+        width: 90%;
 
+    }
+    .content-right-header-bottom h1{
+        font-size: 34px;
+        line-height:50px;
+
+    }
+    .content-right-header-bottom p{
+        line-height: 22px;
+    }
+    .fixed-box-delivery{
+        padding: 10px;
+        font-size: 13px;
+        top: -19px;
+    }
+    .fixed-box-delivery > span{
+        font-size: 18px;
+    }
+    .order-action{
+        align-items: center;
+    }
+    .order-action > button{
+        height: 50px;
+        padding: 15px;
+        font-size: 19px;
+    }
+    .button-action-order{
+        gap:10px
     }
 
 }
 
-@media (max-width:769px) {
-    .button-action-order {
-        max-width: 35%;
+
+@media (max-width:648px) {
+    .header-bottom {
+       
+        grid-template-columns: repeat(1, 1fr);
+        
+    }
+    .content-right-header-bottom{
+        width: 100%;
+        text-align: center;
+    }
+    .content-right-header-bottom h1{
+        font-size: 46px;
+    }
+    
+    .content-right-header-bottom p{
+        
+        max-width:100%;
+        font-size: 18px;
+        margin-top: 12px;
 
     }
+    .order-action{
+        width: 100%;
+        justify-content: center;
+    }
+    .fixed-box-delivery{
+        position: fixed;
+        width: 30%;
+    }
+    
 
+    .order-food-desktop{
+        display: none;
+    }
 
-
+    .order_food_mobile{
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+   
+}
+@media (min-width:649){
+    .order-food-mobile{
+        display: none;
+    }
 }
