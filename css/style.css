@@ -6,6 +6,7 @@
 
 body {
     font-family: poppins;
+    padding: 8rem;
 }
 
 ul {
@@ -291,8 +292,7 @@ img {
     color: #FFC300;
 }
 
-.button-action-order span::before,
-span::after {
+.button-action-order>span::before,.button-action-order>span::after {
     content: '';
     display: inline-block;
     width: 1px;
@@ -300,11 +300,11 @@ span::after {
     background-color: var(--color_F1F1F1);
 }
 
-.button-action-order span::before {
+.button-action-order> span::before {
     margin-right: 12px;
 }
 
-.button-action-order span::after {
+.button-action-order> span::after {
     margin-left: 12px;
 }
 
@@ -357,8 +357,60 @@ span::after {
     font-weight: 400;
     color: var(--color_323232);
 }
+.section-food{
+    padding: 50px 0;
+    
+}
 
+.row-title-section-food h4{
+    position: relative;
+    color: var(--color_C90000);
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 72px;
+}
+.line-bottom-row-title{
+    position: absolute;
+    width: 137px;
+    height: 9px;
+    background-color: var(--color_FFF6A3);
+    top: 42px;
+    z-index: -1;
 
+}
+.row_button_category{
+    display: grid;
+    grid-template-columns: repeat(5,max-content) ;
+    column-gap: 10px;
+    grid-auto-flow: column;
+    overflow-x: auto;
+    margin-top: 30px;
+}
+.row_button_category button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--color_E3E3E3);
+    background-color: var(--color_F1F1F1);
+    color: var(--color_504F4F);
+    font-size: 16px;
+    font-weight: 400;
+    padding: 14px 20px;
+    column-gap: 8px;
+    outline: none;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+    
+}
+
+.button_active_category{
+    background-color: var(--color_FFC300) !important;
+    color: var(--color_323232)  !important;
+    font-weight: 600 !important;
+}
 
 
 @media (max-width:1167px) {
@@ -483,7 +535,7 @@ span::after {
     }
    
 }
-@media (min-width:649){
+@media (min-width:649px){
     .order-food-mobile{
         display: none;
     }
