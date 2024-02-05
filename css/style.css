@@ -23,6 +23,10 @@ button {
     box-sizing: border-box;
 }
 
+html{
+    display: block;
+}
+
 @font-face {
     font-family: poppins;
     font-style: normal;
@@ -76,6 +80,7 @@ button {
     --color_E3E3E3: #E3E3E3;
     --color_F1F1F1: #F1F1F1;
     --color_FFEAE6: #FFEAE6;
+    --colo-FFFDE6:#FFFDE6;
 }
 
 .text_danger {
@@ -92,9 +97,9 @@ img {
 }
 
 .container {
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
+    max-width: 1170px;
+    margin: 0 0.5rem;
+    padding: 0 0.5rem;
 }
 
 .navgation {
@@ -425,8 +430,8 @@ img {
 
     display: grid;
     margin-top: 30px;
-    gap: 8px;
-    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    grid-template-columns: repeat(3, 370px);
 
 
 }
@@ -439,14 +444,37 @@ img {
     -moz-border-radius: 12px;
     -ms-border-radius: 12px;
     -o-border-radius: 12px;
+    position: relative;
 }
+
 .product-img{
-    width: 100%;
-    
+   
+    position: relative;
     text-align: center;
 }
 .product-img img{
-    width: 80%;
+    width: 100%;
+    height: 170px;
+    object-fit: none;
+    
+}
+.product-img div{
+    height: 105px;
+    width: 100%;
+    position: absolute;
+    background-color: var(--colo-FFFDE6);
+    z-index: -1;
+    bottom: -4px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+.badge-discount{
+
+    width: 48px;
+    position: absolute;
     
 }
 .product-item-content{
@@ -474,6 +502,8 @@ img {
 }
 .rank-star svg{
     margin: 0 .2rem;
+    width: 24px;
+    height: 24px;
 }
 .rank-star span{
 
@@ -503,7 +533,7 @@ img {
     padding: 5.4px;
     border-radius: 8px;
     color: var(--color_FFF6A3);
-    
+    border: none;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
     -ms-border-radius: 8px;
@@ -593,6 +623,36 @@ img {
         gap: 10px
     }
 
+    .products {
+        grid-template-columns: repeat(2, auto);
+        gap: 10px;
+        
+    }
+    .product-item-content h4{
+
+        font-size: 15px;
+        
+    }
+    .product-item-content p{
+        color: var(--color_504F4F);
+        font-size: 12px;
+    }
+    .rank-star svg{
+        width: 18px;
+        height: 18px;
+    }
+
+    .product-price span{
+        font-size: 20px;
+        
+    }
+    .product-price button{
+        width: 38px;
+        height: 38px;
+       
+    }
+
+
 }
 
 
@@ -642,10 +702,21 @@ img {
         align-items: center;
     }
 
+  
+
 }
 
 @media (min-width:649px) {
     .order-food-mobile {
         display: none;
     }
+}
+
+@media (max-width:500px){
+    .products {
+        grid-template-columns: repeat(1, auto);
+        gap: 10px;
+        
+    }
+
 }
