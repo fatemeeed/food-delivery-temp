@@ -546,8 +546,8 @@ img {
 }
 
 .product-see-all{
-    width: 1170px;
-   
+    display: block;
+    margin-top: 1.5rem;
     text-align: center;
     color: #323232;
     cursor: pointer;
@@ -601,35 +601,33 @@ img {
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
     border: 1px solid var(--color_E3E3E3);
+    padding: 28px 0 28px 28px;
 }
 
 .sale-off-category{
     color: var(--color_323232);
     display: grid;
-    grid-template-columns: 100px auto;
+    grid-template-columns: max-content auto;
     align-items: center;
-    
+    column-gap: 4px;
 
     
 }
 .sale-off-category h6{
     font-size: 16px;
     font-weight: 400;
-   
-
+    
 }
  .sale-off-category-line{
    
-    height: 0.25px;
+    height: 1px;
     background-color: var(--color_7D7C7C);
  
-    
-
 }
 .sale-off-content{
     width: 100%;
     position: relative;
-    padding: 32px 0 32px 32px;
+    
 }
 .sale-off-content img{
     position: absolute;
