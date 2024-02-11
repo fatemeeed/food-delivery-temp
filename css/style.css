@@ -335,10 +335,10 @@ img {
     -o-border-radius: 100px;
 }
 
-.order-action>button svg {
+.order-action > button svg {
     width: 24px;
     height: 24px;
-    margin-right: 12px;
+    margin-right: 3px;
 }
 
 .fixed-box-delivery {
@@ -588,20 +588,32 @@ img {
 
 }
 .row-sale-off-items{
+    margin-top: 1.3rem;
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(370px,1fr));
-    gap: 20px;
+    gap:20px;
 
 }
 .sale-food-item{
+    /* width: 370px;
+    height: 335px; */
+    height: 335px;
     background-color: var(--color_E3E3E3);
     border-radius: 20px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
-    border: 1px solid var(--color_E3E3E3);
+    /* border: 1px solid var(--color_E3E3E3); */
     padding: 28px 0 28px 28px;
+    transition: all .5s ease-in-out;
+    overflow: hidden;
+}
+
+.sale-food-item:hover{
+    background-color: var(--color_C90000);
+    transform: scale(1.05);
+
 }
 
 .sale-off-category{
@@ -613,11 +625,29 @@ img {
 
     
 }
+
 .sale-off-category h6{
     font-size: 16px;
     font-weight: 400;
     
 }
+.sale-food-item:hover .sale-off-category ,.sale-food-item:hover .sale-off-content .price span:first-child{
+    color: var(--color_F1F1F1);
+}
+.sale-food-item:hover .sale-off-content h5 , .sale-food-item:hover .sale-off-content p ,.sale-food-item:hover .sale-off-content .price span:last-child{
+    color: var(--color_FFC300);
+}
+.sale-food-item:hover .sale-off-content button {
+    background-color: var(--color_F1F1F1);
+    color: var(--color_323232);
+}
+.sale-food-item:hover .sale-off-content button  svg{
+    fill: var(--color_323232);
+}
+.sale-food-item:hover .sale-off-category-line {
+    background-color: var(--color_F1F1F1);
+}
+
  .sale-off-category-line{
    
     height: 1px;
@@ -633,11 +663,13 @@ img {
     position: absolute;
     object-fit: none;
     width: 100%;
-    right: -120px;
-    top: 10px;
+    transform: scale(1.2);
+    right: -100px;
+    top: 15px;
+   
 }
 .sale-off-content h5{
-    font-size: 32px;
+    font-size: 30px;
     
     font-weight: 600;
     color: var(--color_C90000);
@@ -651,12 +683,16 @@ img {
     width: 50%;
 }
 .sale-off-content .price{
+    margin-top: 1.3rem;
+}
+.sale-off-content .price span:first-child{
     padding: 8px 0;
     color: var(--color_504F4F);
     font-size: 16px;
+    text-decoration: line-through;
 }
 
-.sale-off-content .price span{
+.sale-off-content .price span:last-child{
     color: var(--color_C90000);
     font-size: 24px;
     font-weight: 600;
@@ -669,14 +705,27 @@ img {
     font-weight: 400;
     border-radius: 20px;
     padding: 8px;
+    
     display: flex;
     align-items: center;
+    justify-content: center;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
-    margin-top: 20px;
+    margin-top: 3rem;
+    cursor: pointer;
+    font-family: poppins;
 }
+
+
+.sale-off-content button svg{
+    fill: #F1F1F1;
+    margin-right: 3px;
+    
+}
+
+
 
 
 @media (max-width:1167px) {
